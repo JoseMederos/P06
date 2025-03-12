@@ -75,7 +75,7 @@ export class ComplexNumber implements Arithmeticable<ComplexNumber> {
   multiply(other: ComplexNumber): ComplexNumber {
     return new ComplexNumber(
       this.real * other.real - this.imag * other.imag,
-      this.real * other.imag - this.imag * other.real,
+      this.real * other.imag + this.imag * other.real,
     );
   }
 
@@ -87,11 +87,11 @@ export class ComplexNumber implements Arithmeticable<ComplexNumber> {
   divide(other: ComplexNumber): ComplexNumber {
     return new ComplexNumber(
       this.real * other.real +
-        (this.imag * other.imag) / (this.imag * this.imag) +
-        other.imag * other.imag,
+        (this.imag * other.imag) /
+          (this.imag * this.imag + other.imag * other.imag),
       this.imag * other.real -
-        (this.real * other.imag) / (this.imag * this.imag) +
-        other.imag * other.imag,
+        (this.real * other.imag) /
+          (this.imag * this.imag + other.imag * other.imag),
     );
   }
 }

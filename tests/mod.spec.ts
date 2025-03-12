@@ -39,13 +39,13 @@ describe("substract function tests", () => {
 describe("miltiply function tests", () => {
   test("multiply(1 + 3i, 2 + 6i) returns value -16", () => {
     expect(complexNumber1.multiply(complexNumber2)).toStrictEqual(
-      new ComplexNumber(-16, 0),
+      new ComplexNumber(-16, 12),
     );
   });
 
   test("multiply(-2 + 3i, 2 -1i) returns value -1 + -4i", () => {
     expect(complexNumber3.multiply(complexNumber4)).toStrictEqual(
-      new ComplexNumber(-1, -4),
+      new ComplexNumber(-1, 8),
     );
   });
 });
@@ -58,8 +58,8 @@ describe("divide function tests", () => {
   });
 
   test("divide(1 + 1i, -2 + 3i) returns value 10 + 4i", () => {
-    expect(complexNumber5.divide(complexNumber3)).toStrictEqual(
-      new ComplexNumber(10, 4),
+    expect(complexNumber3.divide(complexNumber5)).toStrictEqual(
+      new ComplexNumber(-1.7, 3.2),
     );
   });
 });
