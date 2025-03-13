@@ -9,7 +9,7 @@ export interface Arithmeticable<T> {
 }
 
 /**
- * Clase generica ArithmeticableCollection
+ * Clase generica ArithmeticableCollection.
  */
 export class ArithmeticableCollection<T extends Arithmeticable<T>> {
   private items: T[] = [];
